@@ -1,0 +1,98 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #f54325;
+  box-sizing: border-box; }
+
+.main-section {
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase; }
+  .main-section .menu {
+    display: table;
+    margin: 50px auto 20px;
+    color: #4B4B4B; }
+    .main-section .menu .fa-bars {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      border: 1px solid #4B4B4B;
+      display: table-cell;
+      vertical-align: middle;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .main-section .menu .fa-bars:hover {
+      cursor: pointer;
+      background: #f54325;
+      color: #fff;
+      border: 1px solid transparent;
+      transform: rotate(360deg); }
+  .main-section ul {
+    padding: 0;
+    display: inline-block;
+    margin: 20px; }
+  .main-section li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid #4B4B4B;
+    border-radius: 100%;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .main-section li:hover {
+    color: #FFF;
+    border: 1px solid transparent;
+    background: #f54325;
+    transform: rotate(360deg); }
+  .main-section h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.406em; }
+    .main-section h1 span {
+      color: #f54325; }
+  .main-section p {
+    font-family: "Open Sans", sans-serif; }
+  .main-section a {
+    color: #4B4B4B; }
+  .main-section .main-info {
+    color: #4B4B4B;
+    margin: 130px 0 0 0;
+    display: inline-block; }
+  .main-section .navigation ul {
+    opacity: 0;
+    font-family: "Open Sans", sans-serif;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .main-section .navigation ul.active {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .main-section .navigation li {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .main-section .navigation li:hover {
+    transform: rotate(0deg); }
+
+.section {
+  display: inline-block;
+  width: 100%;
+  height: 100%; }
+
+/*# sourceMappingURL=style.css.map */

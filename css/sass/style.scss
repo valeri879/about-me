@@ -1,0 +1,130 @@
+@import "var";
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid $red;
+  box-sizing: border-box;
+}
+
+.main-section {
+  //background: url("../img/images/bg.png") no-repeat 50% 50%;
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase;
+
+  .menu {
+    display: table;
+    margin: 50px auto 20px;
+    color: $grey;
+
+    .fa-bars {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      border: 1px solid $grey;
+      display: table-cell;
+      vertical-align: middle;
+      @include transition(all 0.3s ease-in-out)
+    }
+
+    .fa-bars:hover {
+      cursor: pointer;
+      background: $red;
+      color: #fff;
+      border: 1px solid transparent;
+      transform: rotate(360deg);
+    }
+
+  }
+
+  ul {
+    padding: 0;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid $grey;
+    border-radius: 100%;
+    font-size: 18px;
+    @include transition(all 0.3s ease-in-out);
+  }
+
+  li:hover {
+    color: #FFF;
+    border: 1px solid transparent;
+    background: $red;
+    transform: rotate(360deg);
+  }
+
+  h1 {
+    font-family: $title;
+    font-size: 2.406em;
+
+    span {
+      color: $red;
+    }
+
+  }
+
+  p {
+    font-family: $paragraph;
+  }
+
+  a {
+    color: $grey;
+  }
+
+  .main-info {
+    color: $grey;
+    margin: 130px 0 0 0;
+    display: inline-block;
+  }
+
+  .navigation {
+
+    ul {
+      opacity: 0;
+      font-family: $paragraph;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    ul.active{
+      opacity: 1;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    li {
+      width: auto;
+      height: auto;
+      cursor: pointer;
+      padding: 10px;
+      display: inline-block;
+      margin: 0 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    li:hover{
+      transform: rotate(0deg);
+    }
+
+  }
+
+}
+
+.section {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
