@@ -121,6 +121,9 @@ body, html {
     transition: all 0.3s ease-in-out; }
   .main-section .navigation li:hover {
     transform: rotate(0deg); }
+  .main-section .content-wrapper {
+    position: relative;
+    overflow: hidden; }
 
 .about-me {
   opacity: 0;
@@ -213,6 +216,38 @@ body, html {
 
 .left-border.active {
   top: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.programming-languages {
+  opacity: 0;
+  position: relative;
+  max-width: 840px;
+  margin: auto;
+  display: table;
+  padding: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .programming-languages .chart {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    display: table-cell;
+    margin: 20px 10px;
+    vertical-align: middle;
+    color: #4B4B4B;
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+    text-align: center; }
+  .programming-languages .chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.programming-languages.active {
   opacity: 1;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
