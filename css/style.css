@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow: hidden;
   height: 100%;
   border: 5px solid #f54325;
   box-sizing: border-box; }
@@ -11,25 +12,41 @@ body, html {
   text-align: center;
   text-transform: uppercase; }
   .main-section .menu {
+    position: relative;
     display: table;
     margin: 50px auto 20px;
-    color: #4B4B4B; }
+    color: #4B4B4B;
+    border-radius: 100%;
+    border: 1px solid #4B4B4B;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .main-section .menu .fa-times {
+      position: absolute;
+      top: 17px;
+      left: 19px;
+      opacity: 0; }
+    .main-section .menu .fa-times.active {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      opacity: 1; }
     .main-section .menu .fa-bars {
       width: 50px;
       height: 50px;
-      border-radius: 100%;
-      border: 1px solid #4B4B4B;
       display: table-cell;
-      vertical-align: middle;
+      vertical-align: middle; }
+    .main-section .menu .fa-bars.hide {
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
-    .main-section .menu .fa-bars:hover {
-      cursor: pointer;
-      background: #f54325;
-      color: #fff;
-      border: 1px solid transparent;
-      transform: rotate(360deg); }
+      transition: all 0.3s ease-in-out;
+      opacity: 0; }
+  .main-section .menu:hover, .main-section .menu.active {
+    cursor: pointer;
+    color: #ffffff;
+    background: #f54325;
+    border: 1px solid transparent;
+    transform: rotate(360deg); }
   .main-section ul {
     padding: 0;
     display: inline-block;
@@ -63,7 +80,15 @@ body, html {
   .main-section .main-info {
     color: #4B4B4B;
     margin: 130px 0 0 0;
-    display: inline-block; }
+    display: inline-block;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out; }
+  .main-section .main-info.active {
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    margin: 0; }
   .main-section .navigation ul {
     opacity: 0;
     font-family: "Open Sans", sans-serif;
@@ -87,8 +112,111 @@ body, html {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+  .main-section .navigation li.active {
+    border: 1px solid transparent;
+    background: #f54325;
+    color: #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
   .main-section .navigation li:hover {
     transform: rotate(0deg); }
+
+.about-me {
+  opacity: 0;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .about-me p {
+    position: relative;
+    max-width: 840px;
+    margin: auto;
+    padding: 30px; }
+  .about-me .about-me-type {
+    color: #4B4B4B; }
+
+.about-me.active {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.top-border {
+  position: absolute;
+  opacity: 0;
+  width: 20%;
+  height: 5px;
+  left: -20%;
+  top: 0;
+  background: #f54325;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.right-border {
+  position: absolute;
+  opacity: 0;
+  width: 5px;
+  height: 50%;
+  right: 0;
+  bottom: -50%;
+  background: #f54325;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.left-border {
+  position: absolute;
+  opacity: 0;
+  width: 5px;
+  height: 50%;
+  left: 0;
+  top: -50%;
+  background: #f54325;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.bottom-border {
+  position: absolute;
+  opacity: 0;
+  width: 20%;
+  height: 5px;
+  right: -20%;
+  bottom: 0;
+  background: #f54325;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.top-border.active {
+  left: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.right-border.active {
+  bottom: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.bottom-border.active {
+  right: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.left-border.active {
+  top: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .section {
   display: inline-block;

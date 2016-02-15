@@ -5,6 +5,7 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow: hidden;
   height: 100%;
   border: 5px solid $red;
   box-sizing: border-box;
@@ -17,28 +18,46 @@ body, html {
   text-transform: uppercase;
 
   .menu {
+    position: relative;
     display: table;
     margin: 50px auto 20px;
     color: $grey;
+    border-radius: 100%;
+    border: 1px solid $grey;
+    @include transition(all 0.3s ease-in-out);
+
+    .fa-times {
+      position: absolute;
+      top: 17px;
+      left: 19px;
+      opacity: 0;
+    }
+
+    .fa-times.active {
+      @include transition(all 0.3s ease-in-out);
+      opacity: 1;
+    }
 
     .fa-bars {
       width: 50px;
       height: 50px;
-      border-radius: 100%;
-      border: 1px solid $grey;
       display: table-cell;
       vertical-align: middle;
-      @include transition(all 0.3s ease-in-out)
     }
 
-    .fa-bars:hover {
-      cursor: pointer;
-      background: $red;
-      color: #fff;
-      border: 1px solid transparent;
-      transform: rotate(360deg);
+    .fa-bars.hide {
+      @include transition(all 0.3s ease-in-out);
+      opacity: 0;
     }
 
+  }
+
+  .menu:hover, .menu.active {
+    cursor: pointer;
+    color: #ffffff;
+    background: $red;
+    border: 1px solid transparent;
+    transform: rotate(360deg);
   }
 
   ul {
@@ -88,6 +107,12 @@ body, html {
     color: $grey;
     margin: 130px 0 0 0;
     display: inline-block;
+    @include transition(all 0.8s ease-in-out);
+  }
+
+  .main-info.active {
+    @include transition(all 0.8s ease-in-out);
+    margin: 0;
   }
 
   .navigation {
@@ -98,7 +123,7 @@ body, html {
       @include transition(all 0.3s ease-in-out);
     }
 
-    ul.active{
+    ul.active {
       opacity: 1;
       @include transition(all 0.3s ease-in-out);
     }
@@ -115,12 +140,110 @@ body, html {
       @include transition(all 0.3s ease-in-out);
     }
 
-    li:hover{
+    li.active {
+      border: 1px solid transparent;
+      background: $red;
+      color: #ffffff;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    li:hover {
       transform: rotate(0deg);
     }
 
   }
 
+}
+
+.about-me {
+  opacity: 0;
+  position: relative;
+  @include transition(all 0.3s ease-in-out);
+
+  p {
+    position: relative;
+    max-width: 840px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  .about-me-type {
+    color: $grey;
+  }
+
+}
+
+.about-me.active {
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.top-border {
+  position: absolute;
+  opacity: 0;
+  width: 20%;
+  height: 5px;
+  left: -20%;
+  top: 0;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.right-border {
+  position: absolute;
+  opacity: 0;
+  width: 5px;
+  height: 50%;
+  right: 0;
+  bottom: -50%;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.left-border {
+  position: absolute;
+  opacity: 0;
+  width: 5px;
+  height: 50%;
+  left: 0;
+  top: -50%;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.bottom-border {
+  position: absolute;
+  opacity: 0;
+  width: 20%;
+  height: 5px;
+  right: -20%;
+  bottom: 0;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.top-border.active {
+  left: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.right-border.active {
+  bottom: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.bottom-border.active {
+  right: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.left-border.active {
+  top: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
 }
 
 .section {
