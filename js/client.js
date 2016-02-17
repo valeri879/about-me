@@ -26,6 +26,7 @@ $(document).ready(function () {
 
     //about
     $('.about-nav').on('click', function () {
+        $('.contents').removeClass('active');
         $('.main-info, .border, .about-me').toggleClass('active');
 
         //about me type
@@ -43,7 +44,6 @@ $(document).ready(function () {
     $('.prog-languages').on('click', function () {
         $('.contents, .border, .main-info').removeClass('active');
         $('.programming-languages').addClass('active');
-
         $('.chart').easyPieChart({
             scaleColor: "#ecf0f1",
             lineWidth: 20,
