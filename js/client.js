@@ -37,4 +37,24 @@ $(document).ready(function () {
 
     });
 
+
+    // programming languages
+
+    $('.prog-languages').on('click', function () {
+        $('.contents, .border, .main-info').removeClass('active');
+        $('.programming-languages').addClass('active');
+
+        $('.chart').easyPieChart({
+            scaleColor: "#ecf0f1",
+            lineWidth: 20,
+            lineCap: 'butt',
+            barColor: '#f54325',
+            trackColor: "#ecf0f1",
+            size: 150,
+            animate: 500
+        });
+
+    });
+
+
 });

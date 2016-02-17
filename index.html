@@ -11,6 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/client.js"></script>
 
@@ -29,7 +30,7 @@
             <li>portfolio</li>
             <li>education</li>
             <li>Experience</li>
-            <li>Programming languages</li>
+            <li class="prog-languages">Programming languages</li>
         </ul>
     </nav>
 
@@ -53,20 +54,33 @@
         </ul>
     </div>
 
-    <div class="about-me">
-        <h1 class="about-me-type"></h1>
-        <p>
+    <div class="content-wrapper">
+        <div class="about-me contents">
+            <h1 class="about-me-type"></h1>
+            <p>
+                <span class="border top-border"></span>
+                <span class="border right-border"></span>
+                <span class="border left-border"></span>
+                <span class="border bottom-border"></span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
+                esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
+                esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
+                esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
+            </p>
+        </div>
+        <div class="programming-languages contents">
             <span class="border top-border"></span>
             <span class="border right-border"></span>
             <span class="border left-border"></span>
             <span class="border bottom-border"></span>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
-            esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
-            esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
-            esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
-        </p>
+
+            <div class="chart" data-percent="80">HTML5</div>
+            <div class="chart" data-percent="30">CSS3</div>
+            <div class="chart" data-percent="60">SASS</div>
+            <div class="chart" data-percent="60">PHP</div>
+        </div>
     </div>
 
 </section>
