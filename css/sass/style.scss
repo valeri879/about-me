@@ -86,13 +86,18 @@ body, html {
   }
 
   h1 {
+    color: $grey;
     font-family: $title;
     font-size: 2.406em;
 
     span {
       color: $red;
     }
+  }
 
+  .programming-languages-title {
+    font-size: 26px;
+    margin: 0 0 60px 0;
   }
 
   p {
@@ -154,15 +159,35 @@ body, html {
   }
 
   .content-wrapper {
+
     position: relative;
-    overflow: scroll;
+    width: 100%;
     white-space: nowrap;
 
     .contents {
-      border: 1px solid red;
       display: inline-block;
       width: 100%;
+      margin: 0 0 0 -5px;
       box-sizing: border-box;
+
+      .tb-wrapper {
+        display: table;
+        margin: auto;
+      }
+
+    }
+
+    .about-me, .portfolio, .portfolio, .education, .experience, .programming-languages {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    .programming-languages.active, .about-me.active {
+      opacity: 1;
+      @include transition(all 0.3s ease-in-out);
     }
 
   }
@@ -288,11 +313,6 @@ body, html {
     top: 0;
     left: 0;
   }
-}
-
-.programming-languages.active {
-  opacity: 1;
-  @include transition(all 0.3s ease-in-out);
 }
 
 .section {

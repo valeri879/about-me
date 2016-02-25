@@ -69,10 +69,14 @@ body, html {
     background: #f54325;
     transform: rotate(360deg); }
   .main-section h1 {
+    color: #4B4B4B;
     font-family: "Montserrat", sans-serif;
     font-size: 2.406em; }
     .main-section h1 span {
       color: #f54325; }
+  .main-section .programming-languages-title {
+    font-size: 26px;
+    margin: 0 0 60px 0; }
   .main-section p {
     font-family: "Open Sans", sans-serif; }
   .main-section a {
@@ -123,13 +127,27 @@ body, html {
     transform: rotate(0deg); }
   .main-section .content-wrapper {
     position: relative;
-    overflow: scroll;
+    width: 100%;
     white-space: nowrap; }
     .main-section .content-wrapper .contents {
-      border: 1px solid red;
       display: inline-block;
       width: 100%;
+      margin: 0 0 0 -5px;
       box-sizing: border-box; }
+      .main-section .content-wrapper .contents .tb-wrapper {
+        display: table;
+        margin: auto; }
+    .main-section .content-wrapper .about-me, .main-section .content-wrapper .portfolio, .main-section .content-wrapper .portfolio, .main-section .content-wrapper .education, .main-section .content-wrapper .experience, .main-section .content-wrapper .programming-languages {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0; }
+    .main-section .content-wrapper .programming-languages.active, .main-section .content-wrapper .about-me.active {
+      opacity: 1;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
 
 .about-me {
   opacity: 1;
@@ -252,12 +270,6 @@ body, html {
     position: absolute;
     top: 0;
     left: 0; }
-
-.programming-languages.active {
-  opacity: 1;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
 
 .section {
   display: inline-block;

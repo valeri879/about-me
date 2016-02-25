@@ -27,7 +27,8 @@ $(document).ready(function () {
     //about
     $('.about-nav').on('click', function () {
         $('.contents').removeClass('active');
-        $('.main-info, .border, .about-me').toggleClass('active');
+
+        $('.main-info, .border, .about-me').addClass('active');
 
         //about me type
         $(".about-me-type").typed({
@@ -42,8 +43,18 @@ $(document).ready(function () {
     // programming languages
 
     $('.prog-languages').on('click', function () {
-        $('.contents, .border, .main-info').removeClass('active');
+
+        $('.contents, .border').removeClass('active');
         $('.programming-languages').addClass('active');
+
+        //about me type
+        $(".programming-languages-title").typed({
+            strings: ["programming <span>languages</span> "],
+            typeSpeed: 80,
+            showCursor: false
+        });
+
+        // charts
         $('.chart').easyPieChart({
             scaleColor: "#ecf0f1",
             lineWidth: 20,
