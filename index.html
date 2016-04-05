@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <title>About me</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/typed.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--fonts-->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+    <!--scripts-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easypiechart.min.js"></script>
-    <script src="js/typed.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
     <script src="js/client.js"></script>
+    <script src="js/typed.js"></script>
 
 </head>
 <body>
@@ -27,7 +32,7 @@
         </div>
         <ul>
             <li class="about-nav">about me</li>
-            <li>portfolio</li>
+            <li class="portfolio-nav">portfolio</li>
             <li>education</li>
             <li>Experience</li>
             <li class="prog-languages">Programming languages</li>
@@ -62,15 +67,37 @@
                 <span class="border right-border"></span>
                 <span class="border left-border"></span>
                 <span class="border bottom-border"></span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem
+                enim
                 esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem
+                enim
                 esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem enim
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda debitis dolore, dolorem
+                enim
                 esse, exercitationem explicabo fugit hic iste labore nam neque, nesciunt nisi quam rerum ut. Ad, autem.
             </p>
         </div>
-        <div class="contents portfolio">portfolio</div>
+        <div class="portfolio contents active">
+
+            <h1>portfolio</h1>
+
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>myauto.ge</span></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>mysports.ge</span></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>vereloft.ge</span></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>tbilisibet.ge</span></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>geolab.edu.ge</span></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>starlab.ge</span></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>rembow.ge</span></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="" alt="Logo"><span>capitalbank.ge</span></a></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <div class="contents education">education</div>
         <div class="contents experience">experience</div>
         <div class="programming-languages contents">
@@ -87,6 +114,7 @@
                 <div class="chart" data-percent="50">PHP</div>
             </div>
         </div>
+        <div class="clear"></div>
     </div>
 
 </section>

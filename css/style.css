@@ -1,3 +1,6 @@
+.clear {
+  clear: both; }
+
 body, html {
   margin: 0;
   padding: 0;
@@ -140,14 +143,27 @@ body, html {
     .main-section .content-wrapper .about-me, .main-section .content-wrapper .portfolio, .main-section .content-wrapper .portfolio, .main-section .content-wrapper .education, .main-section .content-wrapper .experience, .main-section .content-wrapper .programming-languages {
       position: absolute;
       width: 100%;
-      left: 0;
+      left: 5px;
       top: 0;
       opacity: 0; }
-    .main-section .content-wrapper .programming-languages.active, .main-section .content-wrapper .about-me.active {
+    .main-section .content-wrapper .programming-languages.active, .main-section .content-wrapper .about-me.active, .main-section .content-wrapper .portfolio.active {
       opacity: 1;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
+    .main-section .content-wrapper .portfolio {
+      height: 200px; }
+      .main-section .content-wrapper .portfolio .swiper-container {
+        height: 100%; }
+      .main-section .content-wrapper .portfolio .swiper-slide {
+        border: 3px solid #f54325;
+        box-sizing: border-box; }
+        .main-section .content-wrapper .portfolio .swiper-slide a {
+          text-decoration: none; }
+        .main-section .content-wrapper .portfolio .swiper-slide span {
+          display: block;
+          font-family: "Montserrat", sans-serif;
+          font-size: 18px; }
 
 .about-me {
   opacity: 1;

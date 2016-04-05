@@ -1,4 +1,5 @@
 @import "var";
+@import "reset";
 @import "bower_components/bourbon/app/assets/stylesheets/_bourbon";
 
 body, html {
@@ -180,14 +181,39 @@ body, html {
     .about-me, .portfolio, .portfolio, .education, .experience, .programming-languages {
       position: absolute;
       width: 100%;
-      left: 0;
+      left: 5px;
       top: 0;
       opacity: 0;
     }
 
-    .programming-languages.active, .about-me.active {
+    .programming-languages.active, .about-me.active, .portfolio.active {
       opacity: 1;
       @include transition(all 0.3s ease-in-out);
+    }
+
+    .portfolio {
+      height: 200px;
+
+      .swiper-container {
+        height: 100%;
+      }
+
+      .swiper-slide {
+        border: 3px solid $red;
+        box-sizing: border-box;
+
+        a{
+          text-decoration: none;
+        }
+
+        span{
+          display: block;
+          font-family: $title;
+          font-size: 18px;
+        }
+
+      }
+
     }
 
   }
