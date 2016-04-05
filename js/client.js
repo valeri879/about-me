@@ -37,6 +37,12 @@ $(document).ready(function () {
     $('.portfolio-nav').on('click', function(){
         $('.contents').removeClass('active');
         $('.portfolio').addClass('active');
+
+        $(".portfolio-type").typed({
+            strings: ["<span>port</span>folio"],
+            typeSpeed: 100,
+            showCursor: false
+        });
     });
 
 
@@ -66,8 +72,8 @@ $(document).ready(function () {
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         slidesPerView: 5,
-        paginationClickable: true,
-        spaceBetween: 30
+        paginationClickable: false,
+        spaceBetween: 40
     });
 
 });

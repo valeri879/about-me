@@ -196,20 +196,60 @@ body, html {
 
       .swiper-container {
         height: 100%;
+        max-width: 1100px;
       }
 
       .swiper-slide {
         border: 3px solid $red;
         box-sizing: border-box;
+        padding: 20px 10px 0 10px;
 
-        a{
+        a {
           text-decoration: none;
         }
 
-        span{
+        span {
           display: block;
           font-family: $title;
-          font-size: 18px;
+          font-size: 14px;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        .icons-container {
+          position: relative;
+          color: $red;
+          display: table;
+          width: 100%;
+
+          i {
+            width: 50px;
+            box-sizing: border-box;
+            height: 50px;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+            @include transition(all 0.3s ease-in-out);
+          }
+
+          .fa-mobile {
+            font-size: 24px;
+          }
+
+          .fa-desktop {
+            font-size: 16px;
+          }
+
+          .fa-laptop {
+            font-size: 21px;
+          }
+
+          .fa-tablet {
+            font-size: 20px;
+          }
+
         }
 
       }
