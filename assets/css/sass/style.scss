@@ -1,0 +1,403 @@
+@import "var";
+@import "reset";
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  border: 5px solid $red;
+  box-sizing: border-box;
+}
+
+.main-section {
+  //background: url("../img/images/bg.png") no-repeat 50% 50%;
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase;
+
+  .menu {
+    position: relative;
+    display: table;
+    margin: 50px auto 20px;
+    color: $grey;
+    border-radius: 100%;
+    border: 1px solid $grey;
+    @include transition(all 0.3s ease-in-out);
+
+    .fa-times {
+      position: absolute;
+      top: 17px;
+      left: 19px;
+      opacity: 0;
+    }
+
+    .fa-times.active {
+      @include transition(all 0.3s ease-in-out);
+      opacity: 1;
+    }
+
+    .fa-bars {
+      width: 50px;
+      height: 50px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .fa-bars.hide {
+      @include transition(all 0.3s ease-in-out);
+      opacity: 0;
+    }
+
+  }
+
+  .menu:hover, .menu.active {
+    cursor: pointer;
+    color: #ffffff;
+    background: $red;
+    border: 1px solid transparent;
+    transform: rotate(360deg);
+  }
+
+  ul {
+    padding: 0;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid $grey;
+    border-radius: 100%;
+    font-size: 18px;
+    @include transition(all 0.3s ease-in-out);
+  }
+
+  li:hover {
+    color: #FFF;
+    border: 1px solid transparent;
+    background: $red;
+    transform: rotate(360deg);
+  }
+
+  h1 {
+    color: $grey;
+    font-family: $title;
+    font-size: 2.406em;
+
+    span {
+      color: $red;
+    }
+  }
+
+  .programming-languages-title {
+    font-size: 26px;
+    margin: 0 0 60px 0;
+  }
+
+  p {
+    font-family: $paragraph;
+  }
+
+  a {
+    color: $grey;
+  }
+
+  .main-info {
+    color: $grey;
+    margin: 130px 0 0 0;
+    display: inline-block;
+    @include transition(all 0.8s ease-in-out);
+  }
+
+  .main-info.active {
+    @include transition(all 0.8s ease-in-out);
+    margin: 0;
+  }
+
+  .navigation {
+
+    ul {
+      opacity: 0;
+      font-family: $paragraph;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    ul.active {
+      opacity: 1;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    li {
+      width: auto;
+      height: auto;
+      cursor: pointer;
+      padding: 10px;
+      display: inline-block;
+      margin: 0 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    li.active {
+      border: 1px solid transparent;
+      background: $red;
+      color: #ffffff;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    li:hover {
+      transform: rotate(0deg);
+    }
+
+  }
+
+  .content-wrapper {
+
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+
+    .contents {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 0 -5px;
+      box-sizing: border-box;
+
+      .tb-wrapper {
+        display: table;
+        margin: auto;
+      }
+
+    }
+
+    .about-me, .portfolio, .portfolio, .education, .experience, .programming-languages {
+      position: absolute;
+      width: 100%;
+      left: 5px;
+      top: 0;
+      opacity: 0;
+    }
+
+    .programming-languages.active, .about-me.active, .portfolio.active {
+      opacity: 1;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    .portfolio {
+      height: 200px;
+
+      .swiper-container {
+        height: 100%;
+        max-width: 1100px;
+      }
+
+      .arrow-container div {
+        background: none;
+        font-size: 42px;
+        color: $red;
+        padding: 10px;
+        margin: 80px 60px;
+        border-radius: 5px;
+        @include transition(all 0.3s ease-in-out);
+      }
+
+      .arrow-container div:hover {
+        background: $red;
+        color: #ffffff;
+      }
+
+      .swiper-slide {
+        border: 3px solid $red;
+        box-sizing: border-box;
+        padding: 20px 10px 0 10px;
+
+        a {
+          text-decoration: none;
+        }
+
+        span {
+          display: block;
+          font-family: $title;
+          font-size: 14px;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        .icons-container {
+          position: relative;
+          color: $red;
+          display: table;
+          width: 100%;
+
+          i {
+            width: 50px;
+            box-sizing: border-box;
+            height: 50px;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+            @include transition(all 0.3s ease-in-out);
+          }
+
+          .fa-mobile {
+            font-size: 24px;
+          }
+
+          .fa-desktop {
+            font-size: 16px;
+          }
+
+          .fa-laptop {
+            font-size: 21px;
+          }
+
+          .fa-tablet {
+            font-size: 20px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.about-me {
+  opacity: 1;
+  position: relative;
+  @include transition(all 0.3s ease-in-out);
+
+  p {
+    position: relative;
+    max-width: 840px;
+    white-space: normal;
+    margin: auto;
+    padding: 30px;
+  }
+
+  .about-me-type {
+    color: $grey;
+  }
+
+}
+
+.about-me.active {
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.top-border {
+  position: absolute;
+  opacity: 0;
+  width: 20%;
+  height: 5px;
+  left: -20%;
+  top: 0;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.right-border {
+  position: absolute;
+  opacity: 0;
+  width: 5px;
+  height: 50%;
+  right: 0;
+  bottom: -50%;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.left-border {
+  position: absolute;
+  opacity: 0;
+  width: 5px;
+  height: 50%;
+  left: 0;
+  top: -50%;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.bottom-border {
+  position: absolute;
+  opacity: 0;
+  width: 20%;
+  height: 5px;
+  right: -20%;
+  bottom: 0;
+  background: $red;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.top-border.active {
+  left: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.right-border.active {
+  bottom: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.bottom-border.active {
+  right: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.left-border.active {
+  top: 0;
+  opacity: 1;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.programming-languages {
+
+  opacity: 1;
+  position: relative;
+  margin: auto;
+  display: table;
+  padding: 30px;
+  @include transition(all 0.3s ease-in-out);
+
+  .chart {
+    font-family: $title;
+    position: relative;
+    display: table-cell;
+    margin: 20px 10px;
+    vertical-align: middle;
+    color: $grey;
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.section {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
