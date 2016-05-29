@@ -15,22 +15,19 @@
                         <img src = "' . site_url($value["logo"]) . '" alt = "Logo" ><span > myauto . ge</span ></a >
                     <div class="icons-container" >';
 
-                if ( $value["desktop"] )
-                {
+                if ($value["desktop"]) {
                     $html .= '<i class="fa fa-desktop" ></i >';
                 }
-                if ( $value["tablet"] )
-                {
+                if ($value["tablet"]) {
                     $html .= '<i class="fa fa-laptop" ></i >';
                 }
-                if ( $value["mobile"] )
-                {
+                if ($value["mobile"]) {
                     $html .= '<i class="fa fa-tablet" ></i >';
                 }
 
-                $html .=   '</div >
+                $html .= '</div >
                 </div >';
-                
+
                 echo $html;
             } ?>
 

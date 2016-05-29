@@ -16,7 +16,7 @@
                     <li><a href="#">Main</a></li>
                     <li><a href="#about">Menu</a></li>
                     <li  class="active"><a href="#contact">About me</a></li>
-                    <li><a href="#contact">portfolio</a></li>
+                    <li><a href="<?php echo site_url('/Admin/portfolio')?>">portfolio</a></li>
                     <li><a href="#contact">aducation</a></li>
                     <li><a href="#contact">experience</a></li>
                     <li><a href="#contact">programming languages</a></li>

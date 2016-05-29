@@ -1,3 +1,32 @@
+header {
+    height: 50px;
+}
+
+header:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.portfolio-wrapper {
+    text-align: center;
+    border: 1px solid #Fff;
+    background: #F7F7F7;
+}
+
+.portfolio-wrapper img{
+    width: 135px;
+    height: 100px;
+}
+
+.full-button {
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
 
 .form-signin {
     max-width: 330px;
@@ -49,7 +78,7 @@
     text-transform: capitalize;
 }
 
-.clear{
+.clear {
     clear: both;
 }
 
@@ -58,6 +87,7 @@
     text-align: center;
     background-color: transparent;
 }
+
 .jumbotron .btn {
     padding: 14px 24px;
     font-size: 21px;
