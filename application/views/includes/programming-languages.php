@@ -10,5 +10,6 @@
         <div class="chart" data-percent="90">CSS3</div>
         <div class="chart" data-percent="95">SASS</div>
         <div class="chart" data-percent="50">PHP</div>
+        <div class="chart" data-percent="77">JS/jquery</div>
     </div>
 </div>
