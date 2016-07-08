@@ -1,12 +1,12 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: valer
  * Date: 5/27/2016
  * Time: 3:46 PM
  */
-
-class Portfolio_Model extends CI_Model
+class Admin_portfolio extends CI_Model
 {
 
     public function GetPortfolio()
@@ -18,6 +18,33 @@ class Portfolio_Model extends CI_Model
     public function insertPortfolio()
     {
 
+    }
+
+    public function Update( $data )
+    {
+        print_r($data);
+        echo "Model";
+
+//        $upd = array(
+//            'logo' => "",
+//            'name' => "",
+//            'link' => "",
+//            'desktop' => "",
+//            'tablet' => "",
+//            'mobile' => "",
+//        );
+
+
+    }
+
+    public function Delete($id)
+    {
+        $this->db->where('id', $id);
+        if ($this->db->delete('portfolio')) {
+            return true;
+        }
+
+        return false;
     }
 
 }

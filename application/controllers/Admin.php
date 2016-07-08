@@ -8,7 +8,7 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Portfolio_Model', 'portfolio');
+        $this->load->model('Admin_portfolio');
     }
 
     public function index()
@@ -34,9 +34,27 @@ class Admin extends CI_Controller
 
     public function portfolio()
     {
-        $data["portfolios"] = $this->portfolio->GetPortfolio();
+        $data["portfolios"] = $this->Admin_portfolio->GetPortfolio();
         $this->load->view('admin/index');
         $this->load->view('admin/includes/portfolio', $data);
+    }
+
+    public function Update( )
+    {
+        $this->Admin_portfolio->Update($_POST);
+        
+    }
+
+
+    public function deletePortfolio($portfolioID = false)
+    {
+        if ($portfolioID) {
+            if ($this->Admin_portfolio->Delete($portfolioID)) {
+                redirect("http://localhost/about-me/Admin/portfolio");
+            } else {
+                show_404();
+            }
+        }
     }
 
 
